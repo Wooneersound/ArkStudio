@@ -1,0 +1,111 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+:root {
+  --bg-color: #0a0a0a; /* 완전한 블랙에 가까운 다크 그레이 */
+  --text-color: #f5f5f5;
+  --accent-color: #4a90e2; /* 포인트 컬러 (원하시면 변경 가능) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* 메뉴 클릭 시 부드럽게 스크롤 */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  overflow-x: hidden;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px); /* 뒤가 살짝 비치는 힙한 효과 */
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* 각 섹션 공통 스타일 */
+.section {
+  min-height: 100vh;
+  padding: 100px 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* 디스코그래피 그리드 (로컬 이미지용) */
+.disco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.disco-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+  background: #222; /* 이미지가 없을 때 빈 공간 색상 */
+}
+
+.disco-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.disco-item:hover img {
+  transform: scale(1.05); /* 마우스 올리면 살짝 커지는 효과 */
+}
