@@ -10,6 +10,7 @@ import logoImg from './photo/others/logo.png';
 import instaIcon from './photo/others/instagram.png';
 import youtubeIcon from './photo/others/youtube.png';
 import engJun from './photo/engineers/eng_jun.jpg';
+/* 🌟 우진님 사진 import 복구 완료 */
 import engWoo from './photo/engineers/eng_woo.jpg';
 
 import about1 from './photo/studio/about1.jpg';
@@ -22,16 +23,17 @@ import gear2 from './photo/gear/gear2.jpg';
 import gear3 from './photo/gear/gear3.jpg';
 
 const gearData = [
-  { category: "MONITOR", items: ["Amphion One25a", "Neumann KH310", "Grace design m905", "Credit Sound Cuemixer"] },
-  { category: "HEADPHONE", items: ["Austrian Audio The Composer", "Sennheiser HD600, HD25", "Sony MDR 7506", "Audio Technica ATH-M50x"] },
-  { category: "MIC", items: ["Neumann M149", "Neumann U87", "Peluso P-280", "Shure SM7B, SM58, SM57"] },
-  { category: "OUTBOARD", items: ["Neve 1073 spx", "Manley dual mono", "Vintage Neve", "Cranborne Audio", "Overstayer 8755dm", "Fatso jr", "RND 5059", "Acme XLA-500", "SPL Des 500"] }
+  { category: "MONITORING SYSTEM", items: ["Amphion One25a", "Trinnov NOVA", "Grace design m905", "Credit Sound Cuemixer"] },
+  { category: "CONVERTERS", items: ["Universal Audio Apollo x16 × 2", "Dangerous Music CONVERT-AD+"] },
+  { category: "HEADPHONES", items: ["Austrian Audio The Composer", "Sennheiser HD600, HD25", "Sony MDR 7506", "Audio Technica ATH-M50x"] },
+  { category: "MICROPHONES", items: ["Neumann U 87 Ai", "Neumann M 149 Tube", "Peluso Microphone Lab P-280", "Peluso Microphone Lab P-47 SS","Shure SM7B x4","Shure SM58 x3","Shure SM57"] },
+  { category: "OUTBOARD", items: ["Rupert Neve Designs 5059 Satellite","Rupert Neve Designs R6","Empirical Labs EL7 FATSO Jr.","Overstayer Modular Channel 8755DM", "A-Designs Audio HM2EQ Hammer", "Solid State Logic THE BUS+", "Manley Dual Mono Microphone Preamplifier", "BBE Sound Sonic Maximizer", "Kush Audio Clariphonic 500", "Acme Audio Opticom XLA-500", "SPL DeS", "Chandler Limited TG2-500", "BAE Audio 1073MP","Cranborne Audio Camden 500"] }
 ];
 
 const ratesData = [
   { service: "Recording", personal: "200,000", business: "250,000" },
   { service: "Tune", personal: "150,000", business: "200,000" },
-  { service: "Mixing", personal: "600,000", business: "800,000" },
+  { service: "Mixing", personal: "가격문의", business: "가격문의" },
   { service: "Mastering", personal: "100,000", business: "150,000" },
 ];
 
@@ -39,7 +41,7 @@ const PurpleMusicModel = () => {
   const { scene } = useGLTF('/orange_cat_3.glb');
   return (
     <Float speed={1.5} rotationIntensity={0.5} floatIntensity={1}>
-      <primitive object={scene} scale={2} position={[0, -1, 0]} />
+      <primitive object={scene} scale={2} position={[0, -1, 0]} rotation={[2, 3.6, 2.14]} />
     </Float>
   );
 };
@@ -50,7 +52,7 @@ const fadeUp = {
 };
 
 function App() {
-  const menuItems = ['About', 'Discography', 'Gear', 'Rates', 'Contact'];
+  const menuItems = ['About', 'Discography', 'Gear', /*'Rates'*/, 'Contact'];
   const [activeYear, setActiveYear] = useState('2022');
   const [visibleCount, setVisibleCount] = useState(8);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -88,15 +90,14 @@ function App() {
             ))}
           </div>
           <div className="social-links">
-            <a href="https://www.instagram.com/arkstudio_official/" target="_blank" rel="noopener noreferrer"><img src={instaIcon} alt="Instagram" /></a>
+            <a href="https://www.instagram.com/arkstudio_kr/" target="_blank" rel="noopener noreferrer"><img src={instaIcon} alt="Instagram" /></a>
             <a href="https://www.youtube.com/@arkstudio_official" target="_blank" rel="noopener noreferrer"><img src={youtubeIcon} alt="YouTube" /></a>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section id="home" style={{ position: 'fixed', top: 0, left: 0, height: '100vh', width: '100vw', background: '#000', zIndex: 0 }}>
-        <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
+        <Canvas style={{ touchAction: 'pan-y' }} camera={{ position: [0, 0, 8], fov: 45 }}>
           <ambientLight intensity={0.4} />
           <spotLight position={[10, 10, 10]} angle={0.2} penumbra={1} intensity={2.5} color="#ffaa55" />
           <pointLight position={[-10, -10, -10]} intensity={1.5} color="#ffffff" />
@@ -105,11 +106,10 @@ function App() {
               <PurpleMusicModel />
             </Stage>
           </Suspense>
-          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
+          <OrbitControls enableZoom={false} enablePan={false} enableRotate={true} autoRotate autoRotateSpeed={0.8} />
         </Canvas>
       </section>
 
-      {/* 하단 컨텐츠 래퍼 */}
       <div className="content-wrapper">
         
         {/* About */}
@@ -143,7 +143,11 @@ function App() {
           
           <h3 style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#fff', letterSpacing: '2px', fontWeight: '600' }}>ENGINEERS</h3>
           <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
-            {[ {name: "Junyoung", img: engJun, role: "Mix & Master (Owner)"}, {name: "Woojin", img: engWoo, role: "Mix & Master Engineer"} ].map((eng) => (
+            {/* 🌟 우진님 프로필 복구 완료 */}
+            {[ 
+              {name: "Junyoung", img: engJun, role: "Mix & Master (Owner)"}, 
+              {name: "Woojin", img: engWoo, role: "Mix & Master Engineer"} 
+            ].map((eng) => (
               <div key={eng.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '200px' }}>
                 <div className="hover-grayscale" style={{ borderRadius: '50%', overflow: 'hidden', width: '160px', height: '160px', marginBottom: '20px', border: '1px solid var(--border-color)' }}>
                   <img src={eng.img} alt={eng.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -183,7 +187,6 @@ function App() {
                   initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: (idx % 8) * 0.05 }} viewport={{ once: true }}
                 >
                   <div className="disco-img-wrapper">
-                    {/* 🌟 encodeURI를 적용하여 띄어쓰기와 한글 경로 오류를 방지합니다. 에러 시 로고로 안바뀌게 수정(오류 확인용) */}
                     <img src={encodeURI(item.img)} alt={item.album} className="album-cover" />
                     <div className="disco-overlay">
                       <h3 className="overlay-album">{item.album}</h3>
@@ -226,7 +229,7 @@ function App() {
           </div>
         </section>
 
-        {/* Rates */}
+        {/* Rates *}
         <section id="rates" className="section">
           <h2 className="section-title">RATES</h2>
           <div className="section-subtitle">Service Pricing</div>
@@ -265,7 +268,7 @@ function App() {
             <p style={{ fontSize: '1.5rem', color: '#fff', fontWeight: '600', marginBottom: '15px' }}>+82 10 8975 7064</p>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>arkstudio@naver.com</p>
             <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', marginBottom: '5px' }}>서울 마포구 성미산로 85, 4층</p>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>주차 가능 (Parking Available)</p>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>주차 문의 (Parking Available)</p>
           </div>
           
           <div style={{ width: '100%', height: '400px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
