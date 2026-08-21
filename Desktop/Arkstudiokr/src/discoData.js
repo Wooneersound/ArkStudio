@@ -116,7 +116,7 @@ export const discoData = [
         artist: "박찬영", 
         album: "행복의 이유", 
         credit: "All Track Digital Edit,Mix, Master", 
-        img: "/disco/2026/박찬영 - 행복의 이유 _ All Track Mix,Master.png" 
+        img: "/disco/2026/parkchanyoung.png"
       },
       { 
         artist: "Lemon City", 
@@ -128,7 +128,7 @@ export const discoData = [
         artist: "허회경", 
         album: "[Live Clip] 허회경 (Heo Hoy Kyung) - 얼마나 좋을까", 
         credit: "Digital Edit, Mix", 
-        img: "/disco/2026/[Live Clip] 허회경 (Heo Hoy Kyung) - 얼마나 좋을까_ Digital Edit,Mix,Master.jpg" 
+        img: "/disco/2026/heohoy_live.jpg" 
       },
       { 
         artist: "ATEEZ", 
