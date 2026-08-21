@@ -53,7 +53,7 @@ const fadeUp = {
 
 function App() {
   const menuItems = ['About', 'Discography', 'Gear', /*'Rates'*/, 'Contact'];
-  const [activeYear, setActiveYear] = useState('2022');
+  const [activeYear, setActiveYear] = useState('2026');
   const [visibleCount, setVisibleCount] = useState(8);
   const [isScrolled, setIsScrolled] = useState(false);
 
