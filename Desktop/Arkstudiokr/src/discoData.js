@@ -20,13 +20,13 @@ export const discoData = [
         artist: "유라 (Youra)", 
         album: "Brush [EP]", 
         credit: "All Track Record,Digital Edit,Mix,Master", 
-        img: "/disco/2026/유라 (Youra) - Brush [EP] _ All Track Record,Digital Edit,Mix,Master.png" 
+        img: "/disco/2026/Youra_brush.png" 
       },
       { 
         artist: "백아연", 
         album: "들어봐", 
         credit: "All Track Vocal Record,Digital Edit, Mix, Master", 
-        img: "/disco/2026/백아연 - 아직도 난 너야 (Feat. 현빈 of All(H)OURS) _ Vocal Record,Digital Edit,Mix,Master.png" 
+        img: "/disco/2026/baek_hear.png" 
       },
       { 
         artist: "Kani", 
@@ -62,7 +62,7 @@ export const discoData = [
         artist: "윤새", 
         album: "Forevermore", 
         credit: "Mix", 
-        img: "/disco/2026/윤새 - Forevermore _ Mix.png" 
+        img: "/disco/2026/Forevermore.png" 
       },
       { 
         artist: "Lemon City", 
@@ -92,19 +92,13 @@ export const discoData = [
         artist: "김어항", 
         album: "WILLOW", 
         credit: "Master", 
-        img: "/disco/2026/김어항 - WILLOW _ Master.png" 
+        img: "/disco/2026/willow.png" 
       },
       { 
         artist: "Sup!", 
         album: "무쓸모의 쓸모", 
         credit: "Master", 
-        img: "/disco/2026/Sup! - 무쓸모의 쓸모 _ Master.png" 
-      },
-      { 
-        artist: "백수정", 
-        album: "어른이되면", 
-        credit: "Mix, Master", 
-        img: "/disco/2026/백수정 - 어른이되면 _ Mix,Master.png" 
+        img: "/disco/2026/supi.png" 
       },
       { 
         artist: "Lemon City", 
@@ -116,7 +110,7 @@ export const discoData = [
         artist: "백아연", 
         album: "[Live Clip] 백아연(Baek A Yeon) ‘아직도 난 너야(Feat. HYUNBIN of ALL(H)OURS)’", 
         credit: "Digital Edit, Mix, Master", 
-        img: "/disco/2026/[Live Clip] 백아연(Baek A Yeon) ‘아직도 난 너야(Feat. HYUNBIN of ALL(H)OURS)’ Live Clip _ Digital Edit,Mix,Master.jpg" 
+        img: "/disco/2026/baek_live.jpg" 
       },
       { 
         artist: "박찬영", 
@@ -146,7 +140,7 @@ export const discoData = [
         artist: "Scon", 
         album: "너에게 반해", 
         credit: "Digital Edit", 
-        img: "/disco/2026/Scon - 너에게 반해 _ Digital Edit.png" 
+        img: "/disco/2026/scon.png" 
       },
       { 
         artist: "The Vignettes", 
@@ -158,25 +152,25 @@ export const discoData = [
         artist: "MYRAKL", 
         album: "[LIVE] 260411 MYRAKL 라이브버스킹", 
         credit: "Digital Edit,Mix", 
-        img: "/disco/2026/[LIVE] 260411 MYRAKL 라이브버스킹 @더현대 서울 _ Digital Edit,Mix,Master.jpg" 
+        img: "/disco/2026/MYRAKLBUSKING.jpg" 
       },
       { 
         artist: "최유리", 
         album: "머무름, 둘 [EP]", 
         credit: "All Track Vocal Record,(1,5)Track Piano Record", 
-        img: "/disco/2026/최유리 - 머무름, 둘 [EP] _ All Track Vocal Record,(1,5)Track Piano Record.png" 
+        img: "/disco/2026/choi-EP.png" 
       },
       { 
         artist: "허회경", 
         album: "허회경 - 얼마나 좋을까 (feat. 박찬영) | [TEXTED] Heo Hoy Kyung | 가사 (Lyrics) | 딩고뮤직 | DingoMusic", 
         credit: "Digital Edit", 
-        img: "/disco/2026/허회경-얼마나 좋을까 (feat. 박찬영) | [TEXTED] Heo Hoy Kyung | 가사 (Lyrics) | 딩고뮤직 | DingoMusic _ Digital Edit,Mix,Master.jpg" 
+        img: "/disco/2026/hoy_dingo.jpg" 
       },
       { 
         artist: "최유리", 
         album: "SERIES.L", 
         credit: "Digital Edit", 
-        img: "/disco/2026/[LIVE] 최유리 SERIES.L _ Digital Edit,Mix,Master.jpg" 
+        img: "/disco/2026/choi-series.jpg" 
       },
       
       // 이런 식으로 2026년 작업물들을 쭉 밑으로 이어 적어주세요!
