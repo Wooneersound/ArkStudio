@@ -146,7 +146,7 @@ function App() {
             {/* 🌟 우진님 프로필 복구 완료 */}
             {[ 
               {name: "Junyoung", img: engJun, role: "Mix & Master (Owner)"}, 
-              {name: "Woojin", img: engWoo, role: "Mix & Master Engineer"} 
+              /*{name: "Woojin", img: engWoo, role: "Mix & Master Engineer"}*/
             ].map((eng) => (
               <div key={eng.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '200px' }}>
                 <div className="hover-grayscale" style={{ borderRadius: '50%', overflow: 'hidden', width: '160px', height: '160px', marginBottom: '20px', border: '1px solid var(--border-color)' }}>
